@@ -1,3 +1,5 @@
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
 // webpack.config.js
 module.exports = {
   entry: "./src/main.js",
@@ -7,8 +9,12 @@ module.exports = {
     libraryTarget: "umd"
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.vue$/, loader: "vue-loader" }
     ]
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ],
+  mode: "development"
 };

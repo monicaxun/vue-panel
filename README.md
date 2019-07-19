@@ -100,7 +100,7 @@ the second parameter to the `Vue.use` function like so:
 Vue.use(VuePanel, {
   // either hyphenated
   'v-panel': {
-    class: 'Panel',
+    className: 'Panel',
     style: {
       color: 'red',
       backgroundColor: '#ccc'
@@ -108,16 +108,16 @@ Vue.use(VuePanel, {
   },
   // or camel case:
   'vPanelBar': {
-    class: 'Panel-bar'
+    className: 'Panel-bar'
   },
   'vPanelContent': {
-    class: 'Panel-content'
+    className: 'Panel-content'
   }
 });
 ```
 
-`class` and `style` are currently the only options that have any built-in
-effect. The value from `class` will be merged with the class list of each
+`className` and `style` are currently the only options that have any built-in
+effect. The value from `className` will be merged with the class list of each
 component instance via the `v-bind:class` directive. The value(s) from `style`
 will be merged with the inline styles of each component instance via the
 `v-bind:style` directive.
